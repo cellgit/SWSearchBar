@@ -16,7 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        self.setupAppearance()
+        
+        window = UIWindow.init(frame: UIScreen.main.bounds)
+        window?.backgroundColor = UIColor.white
+        window?.rootViewController = SWTabBarViewController()
+        window?.makeKeyAndVisible()
         return true
     }
 
@@ -91,3 +96,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate {
+    /// 设置外观 appearance 是一个协议，设置控件全局外观
+    func setupAppearance() {
+        // 设置 tabBar 的渲染颜色 - 会设置`后续[外观设置之后的]` UITabBar 的 tintColor 全部是指定的颜色
+        UITabBar.appearance().tintColor = UIColor.init(red: 90.0 / 255.0, green: 200.0 / 255.0, blue: 250.0 / 255.0, alpha: 1.0)
+    }
+}

@@ -8,13 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		225601852335F04400E98FA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225601842335F04400E98FA9 /* AppDelegate.swift */; };
-		225601872335F04400E98FA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225601862335F04400E98FA9 /* ViewController.swift */; };
 		2256018A2335F04400E98FA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 225601882335F04400E98FA9 /* Main.storyboard */; };
 		2256018D2335F04400E98FA9 /* SWSearchBar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2256018B2335F04400E98FA9 /* SWSearchBar.xcdatamodeld */; };
 		2256018F2335F04700E98FA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2256018E2335F04700E98FA9 /* Assets.xcassets */; };
 		225601922335F04700E98FA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 225601902335F04700E98FA9 /* LaunchScreen.storyboard */; };
 		2256019D2335F04700E98FA9 /* SWSearchBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2256019C2335F04700E98FA9 /* SWSearchBarTests.swift */; };
 		225601A82335F04700E98FA9 /* SWSearchBarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225601A72335F04700E98FA9 /* SWSearchBarUITests.swift */; };
+		225601B92335F18900E98FA9 /* SWTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225601B82335F18900E98FA9 /* SWTabBarViewController.swift */; };
+		225601BB2335F20900E98FA9 /* SWHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225601BA2335F20900E98FA9 /* SWHomeViewController.swift */; };
+		225601BD2335F29000E98FA9 /* SWSearchBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225601BC2335F29000E98FA9 /* SWSearchBarViewController.swift */; };
+		225601BF2335F3B800E98FA9 /* SWSearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225601BE2335F3B800E98FA9 /* SWSearchBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +40,6 @@
 /* Begin PBXFileReference section */
 		225601812335F04400E98FA9 /* SWSearchBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWSearchBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		225601842335F04400E98FA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		225601862335F04400E98FA9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		225601892335F04400E98FA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2256018C2335F04400E98FA9 /* SWSearchBar.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SWSearchBar.xcdatamodel; sourceTree = "<group>"; };
 		2256018E2335F04700E98FA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +51,10 @@
 		225601A32335F04700E98FA9 /* SWSearchBarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SWSearchBarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		225601A72335F04700E98FA9 /* SWSearchBarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWSearchBarUITests.swift; sourceTree = "<group>"; };
 		225601A92335F04700E98FA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		225601B82335F18900E98FA9 /* SWTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWTabBarViewController.swift; sourceTree = "<group>"; };
+		225601BA2335F20900E98FA9 /* SWHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWHomeViewController.swift; sourceTree = "<group>"; };
+		225601BC2335F29000E98FA9 /* SWSearchBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWSearchBarViewController.swift; sourceTree = "<group>"; };
+		225601BE2335F3B800E98FA9 /* SWSearchBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWSearchBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				225601842335F04400E98FA9 /* AppDelegate.swift */,
-				225601862335F04400E98FA9 /* ViewController.swift */,
+				225601B52335F15C00E98FA9 /* Classes */,
 				225601882335F04400E98FA9 /* Main.storyboard */,
 				2256018E2335F04700E98FA9 /* Assets.xcassets */,
 				225601902335F04700E98FA9 /* LaunchScreen.storyboard */,
@@ -126,6 +132,33 @@
 				225601A92335F04700E98FA9 /* Info.plist */,
 			);
 			path = SWSearchBarUITests;
+			sourceTree = "<group>";
+		};
+		225601B52335F15C00E98FA9 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				225601B72335F15C00E98FA9 /* Main */,
+				225601B62335F15C00E98FA9 /* SearchBar */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		225601B62335F15C00E98FA9 /* SearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				225601BC2335F29000E98FA9 /* SWSearchBarViewController.swift */,
+				225601BE2335F3B800E98FA9 /* SWSearchBarView.swift */,
+			);
+			path = SearchBar;
+			sourceTree = "<group>";
+		};
+		225601B72335F15C00E98FA9 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				225601B82335F18900E98FA9 /* SWTabBarViewController.swift */,
+				225601BA2335F20900E98FA9 /* SWHomeViewController.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +292,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				225601872335F04400E98FA9 /* ViewController.swift in Sources */,
+				225601BD2335F29000E98FA9 /* SWSearchBarViewController.swift in Sources */,
+				225601B92335F18900E98FA9 /* SWTabBarViewController.swift in Sources */,
+				225601BF2335F3B800E98FA9 /* SWSearchBarView.swift in Sources */,
 				225601852335F04400E98FA9 /* AppDelegate.swift in Sources */,
 				2256018D2335F04400E98FA9 /* SWSearchBar.xcdatamodeld in Sources */,
+				225601BB2335F20900E98FA9 /* SWHomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
