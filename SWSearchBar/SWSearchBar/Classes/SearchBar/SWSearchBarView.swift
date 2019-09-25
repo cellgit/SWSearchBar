@@ -8,7 +8,14 @@
 
 import UIKit
 
+
+protocol SWSearchBarDelegate {
+    func sw_searchBar(_ searchBar: UISearchBar, textDidChange searchText: String)
+}
+
 class SWSearchBarView: UIView {
+    
+    public var delegate: SWSearchBarDelegate?
     
     open var searchBar: SWSearchBar!
     
@@ -107,14 +114,12 @@ class SWSearchBarView: UIView {
             searchField.layer.borderWidth = borderWidth
         }
     }
-
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         /// 纯代码
         setupUI()
     }
-    
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -158,6 +163,9 @@ class SWSearchBarView: UIView {
 }
 
 extension SWSearchBarView: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.delegate?.sw_searchBar(searchBar, textDidChange: searchText)
+    }
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         searchBar.setShowsCancelButton(true, animated: true)
     }
