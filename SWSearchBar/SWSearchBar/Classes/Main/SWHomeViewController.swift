@@ -30,8 +30,14 @@ class SWHomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .white
 //        self.title = "SearchBar"
+        if self.traitCollection.userInterfaceStyle == .dark {
+            // User Interface is Dark
+            self.view.backgroundColor = .secondarySystemBackground
+        } else {
+            // User Interface is Light
+            self.view.backgroundColor = .white
+        }
         
         initData()
         self.setupUI()
@@ -46,6 +52,7 @@ class SWHomeViewController: UIViewController {
             navigationController?.navigationBar.prefersLargeTitles = true
             navigationItem.searchController = UISearchController.init(searchResultsController: nil)
         }
+        navigationItem.searchController?.searchBar.searchTextField.text = "1223555"
         definesPresentationContext = true
     }
     
@@ -66,7 +73,6 @@ class SWHomeViewController: UIViewController {
         self.view.addSubview(tableView)
         self.tableView.rowHeight = UITableView.automaticDimension
         self.tableView.estimatedRowHeight = 100
-        tableView.backgroundColor = .white
         let arrayM = [KUITableViewCell]
         for str in arrayM {
             tableView.register(UITableViewCell.self, forCellReuseIdentifier: str) // 纯代码注册
